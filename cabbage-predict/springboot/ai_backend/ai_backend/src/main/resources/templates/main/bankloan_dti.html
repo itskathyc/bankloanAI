@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Your description">
+        <meta name="author" content="Your name">
+
+        <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+        <meta property="og:site_name" content="" /> <!-- website name -->
+        <meta property="og:site" content="" /> <!-- website link -->
+        <meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+        <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+        <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+        <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+        <meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+
+        <!-- Webpage Title -->
+        <title>Bankloan DTI</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Favicon  -->
+    <link rel="icon" href="images/favicon.png">
+
+    <!--CDN-->
+    <!--jQuery-->
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+    <!--fontawesome-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
+    <div class="container">
+
+        <!-- Image Logo -->
+        <a class="navbar-brand logo-image" href="/ai-backend/prediction"><img src="../images/mococoLogo.png" alt="alternative"></a>
+
+        <!-- Text Logo - Use this if you don't have a graphic logo -->
+        <!-- <a class="navbar-brand logo-text" href="index.html">Desi</a> -->
+
+    </div> <!-- end of navbar-collapse -->
+    </div> <!-- end of container -->
+</nav> <!-- end of navbar -->
+<!-- end of navigation -->
+
+
+<!-- Header -->
+<header class="ex-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10 offset-xl-1">
+                <h1>개인 재정상태에 대한 DTI 예측 모델</h1>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</header> <!-- end of ex-header -->
+<!-- end of header -->
+
+
+<!-- Basic -->
+<div class="ex-basic-1 pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <img class="img-fluid mt-5 mb-3"
+                     src="https://www.swissbanking.ch/_ari/c12b045d-6af2-48f1-a1f3-f8fc207284b7/590a41de7c18b97bd7ed53b4e516994f3fddfcd4/1100/0/og/bankkunden.jpg"
+                     alt="alternative"
+                     style="width: 1600px; height:480px;">
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of ex-basic-1 -->
+<!-- end of basic -->
+
+
+<!-- Basic -->
+<div class="ex-basic-1 pt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10 offset-xl-1">
+                <h2 class="mb-3">은행 부동산 대출, AI가 심사한다</h2>
+                 <p>AI는 현대사회에 가장 이슈가 되고 있는 부동산 정책에도 사용됩니다.
+                     그 중 금융대출과 연관이 있는 DTI(총부채상환비율)을 AI가 고객의 재정상태를 기준으로 계산하여 그들이 담보대출을 할 경우 보조지표로 활용합니다.
+                     실제로 이는 신한은행의 '담보평가 시스템' 구축 프로젝트를 통해서 서비스로 구축되고 있습니다. </p>
+                <p>해당 AI모델은 고객의 <b>연소득, 대출금액, 이자율</b>을 입력받고, 이에 대한 DTI비율을 알아냅니다. 그렇게 얻은 정보를 통해 은행은 고객에게 담보대출을 할 경우
+                대출한도를 정하는데 활용할 수 있습니다 </p>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of ex-basic-1 -->
+<!-- end of basic -->
+
+<br><br>
+
+<!-- DTI 계산 파라미터 받기 -->
+<div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+    <div class="col-lg-6">
+        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+            <!-- Name input-->
+            <div class="form-floating mb-3">
+                <input class="form-control" id="yearIncome" type="text" data-sb-validations="required" />
+                <label for="#yearIncome">연 수입</label>
+                <div class="invalid-feedback" data-sb-feedback="name:required">연 수입을 입력해주세요</div>
+            </div>
+            <!-- Email address input-->
+            <div class="form-floating mb-3">
+                <input class="form-control" id="loanAmount" type="text"  data-sb-validations="required" />
+                <label for="#loanAmount">대출금액</label>
+                <div class="invalid-feedback" data-sb-feedback="email:required">대출 금액을 입력해주세요</div>
+            </div>
+            <!-- Phone number input-->
+            <div class="form-floating mb-3">
+                <input class="form-control" id="loanRate" type="text" data-sb-validations="required" />
+                <label for="#loanRate">이자율</label>
+                <div class="invalid-feedback" data-sb-feedback="phone:required">이자율을 입력해주세요</div>
+            </div>
+            <!-- Result-->
+            <div  style="height: 120px;">
+                    <span id="dtiResult">
+
+                    </span>
+            </div>
+            <!-- Submit Button-->
+            <div class="d-grid" style="margin : 30px;"><button class="btn" id="dtiButton" type="button" onclick="printInput();">DTI 예측하기</button></div>
+        </form>
+    </div>
+</div>
+
+<!-- DTI 예상 Script-->
+<script>
+
+        function printInput() {
+
+            let yearIncome = document.getElementById("yearIncome");
+            let loanAmount = document.getElementById("loanAmount");
+            let loanRate = document.getElementById("loanRate");
+
+            let sendUrl = "http://34.64.182.32:8765/predict?type=dti&loan_amount="+loanAmount.value+"&loan_rate="+loanRate.value+"&year_income="+yearIncome.value;
+            let data = requestAPI(sendUrl, null, "GET");
+
+           // alert(data);
+
+            document.getElementById("dtiResult").innerText = data;
+
+        }
+
+
+        function requestAPI(url, request_data, requestType) {
+        var return_val = "";
+        var api_url = url;
+        $.ajax({
+        type: requestType,
+        url: api_url,
+        timeout: 1000,
+        async: false,
+        data: request_data,
+        contentType: "application/json",
+        success: function (data, status, xhr) {
+            return_val = data;
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            alert("ERROR : " + jqXHR.responseText);
+            return false;
+        },
+        });
+        return return_val;
+
+        }
+    </script>
+
+
+
+<!-- Footer -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="footer-col first">
+                    <h6>About Desi</h6>
+                    <p class="p-small">He oppose at thrown desire of no. Announcing impression unaffected day his are unreserved indulgence. Him hard find read are you</p>
+                </div> <!-- end of footer-col -->
+                <div class="footer-col second">
+                    <h6>Links</h6>
+                    <ul class="list-unstyled li-space-lg p-small">
+                        <li>Important: <a href="terms.html">Terms & Conditions</a>, <a href="privacy.html">Privacy Policy</a></li>
+                        <li>Useful: <a href="#">Colorpicker</a>, <a href="#">Icon Library</a>, <a href="#">Illustrations</a></li>
+                        <li>Menu: <a href="#header">Home</a>, <a href="#services">Services</a>, <a href="#projects">Projects</a>, <a href="#contact">Contact</a></li>
+                    </ul>
+                </div> <!-- end of footer-col -->
+                <div class="footer-col third">
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-pinterest-p fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-instagram fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    <p class="p-small">We would love to hear from you <a href="mailto:contact@site.com"><strong>contact@site.com</strong></a></p>
+                </div> <!-- end of footer-col -->
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of footer -->
+<!-- end of footer -->
+
+
+<!-- Copyright -->
+<div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="p-small">Copyright © <a href="#your-link">Your name</a></p>
+            </div> <!-- end of col -->
+        </div> <!-- enf of row -->
+
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="p-small">Distributed by:  <a href="https://themewagon.com/" target="_blank">Themewagon</a></p>
+            </div> <!-- end of col -->
+        </div> <!-- enf of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of copyright -->
+<!-- end of copyright -->
+
+
+<!-- Back To Top Button -->
+<button onclick="topFunction()" id="myBtn">
+    <img src="images/up-arrow.png" alt="alternative">
+</button>
+<!-- end of back to top button -->
+
+<!-- Scripts -->
+<script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+<script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+<script src="js/purecounter.min.js"></script> <!-- Purecounter counter for statistics numbers -->
+<script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
+<script src="js/scripts.js"></script> <!-- Custom scripts -->
+</body>
+</html></title>
+</head>
+
+</html>

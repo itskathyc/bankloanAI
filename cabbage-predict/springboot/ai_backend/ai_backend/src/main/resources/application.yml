@@ -1,0 +1,14 @@
+server:
+  port: 38081
+  #servlet :
+   # context-path: "/ai-backend"
+spring:
+  thymeleaf:
+    prefix: file:src/main/resources/templates/
+    cache: false
+    resources:
+      static-locations: file:src/main/resources/static/
+      cache-period: 0
+  devTools:
+    livereload:
+      enabled: true

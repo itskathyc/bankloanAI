@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Your description">
+    <meta name="author" content="Your name">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+    <meta property="og:site_name" content="" /> <!-- website name -->
+    <meta property="og:site" content="" /> <!-- website link -->
+    <meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+    <meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+
+    <!-- Webpage Title -->
+    <title>Market Price</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Favicon  -->
+    <link rel="icon" href="images/favicon.png">
+
+    <!--CDN-->
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <!-- SimpleLightbox plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- Navigation -->
+<nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
+    <div class="container">
+
+        <!-- Image Logo -->
+        <a class="navbar-brand logo-image" href="index.html"><img src="images/mococoLogo.png" alt="alternative"></a>
+
+        <!-- Text Logo - Use this if you don't have a graphic logo -->
+        <!-- <a class="navbar-brand logo-text" href="index.html">Desi</a> -->
+
+    </div> <!-- end of navbar-collapse -->
+    </div> <!-- end of container -->
+</nav> <!-- end of navbar -->
+<!-- end of navigation -->
+
+
+<!-- Header -->
+<header class="ex-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10 offset-xl-1">
+                <h1>기온과 강수량에 따른 배추값 예측</h1>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</header> <!-- end of ex-header -->
+<!-- end of header -->
+
+
+<!-- Basic -->
+<div class="ex-basic-1 pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <img class="img-fluid mt-5 mb-3"
+                     src="https://images.unsplash.com/photo-1587338755920-b491650d526c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+                     alt="alternative"
+                     style="width: 1600px; height:480px;">
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of ex-basic-1 -->
+<!-- end of basic -->
+
+
+<!-- Basic -->
+<div class="ex-basic-1 pt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10 offset-xl-1">
+                <h2 class="mb-3">Advantages of working with this package</h2>
+                <p>High drew west we no or at john. About or given on witty event. Or sociable up material bachelor bringing landlord confined. Busy so many in hung easy find well up. So of exquisite my an explained remainder. Dashwood denoting securing be on perceive my laughing so. Ye on properly handsome returned throwing am no whatever.</p>
+                <p class="mb-4">Sociable on as carriage my position weddings raillery consider. Peculiar trifling absolute and wandered vicinity property yet. The and collecting motionless difficulty son. His hearing staying ten colonel met. Word drew six easy four dear cold deny. Fulfilled direction use continual set him propriety continued. Saw met applauded favourite deficient.</p>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of ex-basic-1 -->
+<!-- end of basic -->
+
+<br><br><br>
+
+<!-- 배추값 -->
+<div class="row gx-4 gx-lg-5 justify-content-center mb-10">
+    <div class="col-lg-6">
+        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+            <!-- Name input-->
+            <div class="form-floating mb-3">
+                <input class="form-control" id="avgTemp" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                <label for="#avgTemp">평균기온</label>
+                <div class="invalid-feedback" data-sb-feedback="name:required">평균기온을 입력해주세요</div>
+            </div>
+            <!-- Email address input-->
+            <div class="form-floating mb-3">
+                <input class="form-control" id="minTemp" type="text" placeholder="name@example.com" data-sb-validations="required" />
+                <label for="#minTemp">최저기온</label>
+                <div class="invalid-feedback" data-sb-feedback="email:required">최저기온을 입력해주세요</div>
+            </div>
+            <!-- Phone number input-->
+            <div class="form-floating mb-3">
+                <input class="form-control" id="maxTemp" type="text" placeholder="(123) 456-7890" data-sb-validations="required" />
+                <label for="#maxTemp">최고기온</label>
+                <div class="invalid-feedback" data-sb-feedback="phone:required">최고기온을 입력해주세요</div>
+            </div>
+            <!-- Message input-->
+            <div class="form-floating mb-3">
+                <input class="form-control" id="rainFall" type="text" placeholder="Enter your message here..." data-sb-validations="required"></input>
+                <label for="rainFall">강수량</label>
+                <div class="invalid-feedback" data-sb-feedback="message:required">강수량을 입력해주세요</div>
+            </div>
+            <!-- Submit Button-->
+            <!-- Result-->
+            <div  style="height: 120px;">
+                    <span id="cabbResult">
+
+                    </span>
+            </div>
+            <div class="d-grid" style="margin : 30px;"><button class="btn" id="cabbButton" type="button" onclick="printInput();">배추 가격 예측하기</button></div>
+        </form>
+    </div>
+</div>
+
+<!-- 배추값 예상 Script-->
+<script>
+
+        function printInput() {
+
+            let avgTemp = document.getElementById("avgTemp");
+            let minTemp = document.getElementById("minTemp");
+            let maxTemp = document.getElementById("maxTemp");
+            let rainFall = document.getElementById("rainFall");
+
+            let sendUrl = "http://34.64.182.32:8765/cabb_predict?avgTemp="+avgTemp.value+"&maxTemp="+maxTemp.value+"&minTemp="+minTemp.value+"&rainFall="+rainFall.value;
+            //let data = requestAPI("http://34.64.182.32:8765/cabb_predict?avgTemp="+avgTemp.val+"&maxTemp="+maxTemp.val+"&minTemp="+minTemp.val+"&rainFall="+rainFall.val, null, "GET")
+            let data = requestAPI(sendUrl, null, "GET");
+
+            alert(data);
+
+            document.getElementById("cabbResult").innerText = data;
+
+        }
+
+
+        function requestAPI(url, request_data, requestType) {
+        var return_val = "";
+        var api_url = url;
+        $.ajax({
+        type: requestType,
+        url: api_url,
+        timeout: 1000,
+        async: false,
+        data: request_data,
+        contentType: "application/json",
+        success: function (data, status, xhr) {
+            return_val = data;
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            alert("ERROR : " + jqXHR.responseText);
+            return false;
+        },
+        });
+        return return_val;
+
+        }
+    </script>
+
+
+<!-- Footer -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="footer-col first">
+                    <h6>About Desi</h6>
+                    <p class="p-small">He oppose at thrown desire of no. Announcing impression unaffected day his are unreserved indulgence. Him hard find read are you</p>
+                </div> <!-- end of footer-col -->
+                <div class="footer-col second">
+                    <h6>Links</h6>
+                    <ul class="list-unstyled li-space-lg p-small">
+                        <li>Important: <a href="terms.html">Terms & Conditions</a>, <a href="bankloan.html">Privacy Policy</a></li>
+                        <li>Useful: <a href="#">Colorpicker</a>, <a href="#">Icon Library</a>, <a href="#">Illustrations</a></li>
+                        <li>Menu: <a href="#header">Home</a>, <a href="#services">Services</a>, <a href="#projects">Projects</a>, <a href="#contact">Contact</a></li>
+                    </ul>
+                </div> <!-- end of footer-col -->
+                <div class="footer-col third">
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-pinterest-p fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-instagram fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    <p class="p-small">We would love to hear from you <a href="mailto:contact@site.com"><strong>contact@site.com</strong></a></p>
+                </div> <!-- end of footer-col -->
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of footer -->
+<!-- end of footer -->
+
+
+<!-- Copyright -->
+<div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="p-small">Copyright © <a href="#your-link">Your name</a></p>
+            </div> <!-- end of col -->
+        </div> <!-- enf of row -->
+
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="p-small">Distributed by:  <a href="https://themewagon.com/" target="_blank">Themewagon</a></p>
+            </div> <!-- end of col -->
+        </div> <!-- enf of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of copyright -->
+<!-- end of copyright -->
+
+
+<!-- Back To Top Button -->
+<button onclick="topFunction()" id="myBtn">
+    <img src="images/up-arrow.png" alt="alternative">
+</button>
+<!-- end of back to top button -->
+
+<!-- Scripts -->
+<script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+<script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+<script src="js/purecounter.min.js"></script> <!-- Purecounter counter for statistics numbers -->
+<script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
+<script src="js/scripts.js"></script> <!-- Custom scripts -->
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+server:
+  port: 12345
+  servlet :
+    context-path: "/practice-ai"
+spring:
+  thymeleaf:
+    prefix: file:src/main/resources/templates/
+    cache: false
+    resources:
+      static-locations: file:src/main/resources/static/
+      cache-period: 0
+  devTools:
+    livereload:
+      enabled: true
+
